@@ -1,0 +1,30 @@
+
+<h1>Listing gonghaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Weixin Server Url</th>
+      <th>Weixin Token</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gonghaos.each do |gonghao| %>
+      <tr>
+        <td><%= gonghao.name %></td>
+        <td><%= weixin_engine.weixin_server_url(gonghao.weixin_secret_key) %></td>
+
+        <td><%= gonghao.weixin_token %></td>
+        <td><%= link_to 'Show', gonghao %></td>
+        <td><%= link_to 'Edit', edit_gonghao_path(gonghao) %></td>
+        <td><%= link_to 'Destroy', gonghao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gonghao', new_gonghao_path %>

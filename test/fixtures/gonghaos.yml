@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weixin_secret_key: MyString
+  weixin_token: MyString
+  name: MyString
+  appid: MyString
+  appsecret: MyString
+
+two:
+  weixin_secret_key: MyString
+  weixin_token: MyString
+  name: MyString
+  appid: MyString
+  appsecret: MyString
